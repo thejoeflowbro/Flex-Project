@@ -6,6 +6,7 @@
 #include <Arduino_JSON.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#include <HTTPClient.h>
 
 // Data wire is connected to GPIO 4
 #define ONE_WIRE_BUS 4
@@ -16,14 +17,9 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature sensor 
 DallasTemperature sensors(&oneWire);
 
-//Sensor adresses
-DeviceAddress sensor1 = { 0x28, 0x72, 0x16, 0x79, 0x97, 0x2, 0x3, 0x12 };
-DeviceAddress sensor2 = { 0x28, 0x15, 0x6A, 0x79, 0x97, 0x2, 0x3, 0x18 };
-
 // Variables to store temperature values
-String temperatureF = "";
 String temperatureC = "";
-
+String temperatureC1 = "";
 
 // Timer variables
 unsigned long lastTime = 0;  
@@ -32,6 +28,9 @@ unsigned long timerDelay = 3000;
 // Replace with your network credentials
 const char* ssid = "OmniEnergy";
 const char* password = "Kilowattuur";
+
+//Your Domain name with URL path or IP address with path
+String serverName = "http://flexgreen.eu/temperature_register";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -51,19 +50,20 @@ String readDSTemperatureC() {
   return String(tempC);
 }
 
-String readDSTemperatureF() {
+
+String readDSTemperatureC1() {
   // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
   sensors.requestTemperatures(); 
-  float tempF = sensors.getTempFByIndex(0);
+  float tempC1 = sensors.getTempCByIndex(1);
 
-  if(int(tempF) == -196){
+  if(tempC1 == -127.00) {
     Serial.println("Failed to read from DS18B20 sensor");
     return "--";
   } else {
-    Serial.print("Temperature Fahrenheit: ");
-    Serial.println(tempF);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC1); 
   }
-  return String(tempF);
+  return String(tempC1);
 }
 
 // Replaces placeholder with DS18B20 values
@@ -72,8 +72,8 @@ String processor(const String& var){
   if(var == "TEMPERATUREC"){
     return temperatureC;
   }
-  else if(var == "TEMPERATUREF"){
-    return temperatureF;
+    if(var == "TEMPERATUREC1"){
+    return temperatureC1;
   }
   return String();
 }
@@ -89,7 +89,7 @@ void setup() {
   sensors.begin();
 
   temperatureC = readDSTemperatureC();
-  temperatureF = readDSTemperatureF();
+  temperatureC1 = readDSTemperatureC1();
 
     // Connect to Wi-Fi
   WiFi.begin(ssid, password);
@@ -111,9 +111,6 @@ void setup() {
   server.on("/temperaturec", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", temperatureC.c_str());
   });
-  server.on("/temperaturef", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/plain", temperatureF.c_str());
-  });
 
   // Route to load css files
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -132,7 +129,35 @@ void setup() {
 void loop() {
     if ((millis() - lastTime) > timerDelay) {
     temperatureC = readDSTemperatureC();
-    temperatureF = readDSTemperatureF();
+    temperatureC1 = readDSTemperatureC1();
+  //Check WiFi connection status
+    if(WiFi.status()== WL_CONNECTED){
+      HTTPClient http;
+
+      String serverPath = serverName + "?sensor1=sens1&temp1=" + temperatureC + "&sensor2=sens2&temp2=" + temperatureC1 ;
+      
+      // Your Domain name with URL path or IP address with path
+      http.begin(serverPath.c_str());
+      
+      // Send HTTP GET request
+      int httpResponseCode = http.GET();
+      
+      if (httpResponseCode>0) {
+        Serial.print("HTTP Response code: ");
+        Serial.println(httpResponseCode);
+        String payload = http.getString();
+        Serial.println(payload);
+      }
+      else {
+        Serial.print("Error code: ");
+        Serial.println(httpResponseCode);
+      }
+      // Free resources
+      http.end();
+    }
+    else {
+      Serial.println("WiFi Disconnected");
+    }
     lastTime = millis();
   } 
 }
