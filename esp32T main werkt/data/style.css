@@ -1,22 +1,23 @@
 #dropdown{
     background-color: #198119;
 }
-    
+
 body { 
   --Tcolor: #ffffff; 
   --popup-count: 10; 
   font-family: Montserrat, sans-serif; 
   font-size: 16px; 
   overflow: hidden;
+  margin-bottom: 200px;
 } 
 
-img{
+img {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-  
+
 .btn {  
   color: var(--Tcolor);  
   font-weight: bold;
@@ -29,11 +30,13 @@ img{
   cursor: pointer; 
   transition: all 150ms ease-out;
 } 
-  
+
 .popup-open {  
   background-color: #39b34a;
   margin-left: 40px;
+  margin-right: 88vw;
   font-weight: bold;
+  font-size: 1.5vh;
   cursor: pointer; 
   transition: all 150ms ease-out;
   border-radius: 5px;
@@ -45,11 +48,11 @@ img{
   -webkit-user-select: none;
   -ms-user-select: none;
 } 
-    
+
 .popup-opener {  
   display: none;
 } 
-  
+
 .popup-opener:checked + .popup { 
   transform: scale(1); 
   width: 84vw;   
@@ -97,7 +100,6 @@ img{
   transition: transform 300ms ease; 
 }
 
-    
 .background_white{ 
   height: 88vh; 
   width: 84vw; 
@@ -105,9 +107,14 @@ img{
   bottom: 0px; right: 0px; 
   position: absolute; 
   border-radius: 50px 0px 0px 0px;  
-  border: 1px solid rgb(197, 197, 197); 
+  border: 1px solid rgb(197, 197, 197);
+  overflow-y: scroll;
 } 
-    
+
+.background_white::-webkit-scrollbar {
+  display: none;
+}
+
 .header-row {
   border-bottom: 1px solid #ccc; 
 }
@@ -121,53 +128,12 @@ label {
   cursor: pointer; 
 }
 
-.command-buttons { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-}
-
-.command-buttons li { 
-  display: inline-block; 
-  margin-right: 1em; 
-  overflow: auto; 
-}
-
-.form-entry { 
-  margin: 0 0 20px 0; 
-}
-
-.form-entry { 
-  width: 2em; 
-}
-
-.form-entry label { 
-  display: inline-block; 
-}
-
 label:not(.error) .error-info { 
   display: none; 
 }
 
-.error-info { 
-  color: #f00; 
-  font-size: 0.7em; 
-}
-
-.error-info:before { 
-  content: '('; 
-}
-
-.error-info:after { 
-  content: ')'; 
-}
-
 .header-btn { 
   margin: 20px; 
-}
-
-.gateway-add-btn { 
-  float: right; 
 }
 
 #content .dropdown { 
@@ -205,50 +171,12 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 200px;
-}
-
-footer {
-  height: 200px;
-}
-    
-.modal-body .section-title {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.2em;
-}
-    
-ul.action-buttons {
-  list-style: none;
-  padding: 0;
-}
-    
-.action-buttons li {
-  display: inline-block;
-}
-    
-.action-buttons li:not(:first-child) {
-  margin-left: 0.5em;
-}
-    
-.selectize-delete {
-  float: right; 
-}
-
-.c-selectize-item {
-  margin: 0 1em; }
-    
-.inputlabel{
-  color: white;
-  border: 1px;
-  border-width: 1px;
-  border-radius: 2px;
-  color:black;
-}
-
 .card { 
-  background-color: rgb(224, 8, 8); 
+  background-color: #39b34a; 
   align-content: center;
+  border-width: 2px 2px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
 }
     
 .cards { 
@@ -263,14 +191,109 @@ ul.action-buttons {
   font-size: 2.8re; 
 }
     
-.card.temperature { 
-  color: #0e7c7b; 
-  margin: 10px 0px 0px 0px;
+.temperature1 {
+  color: white;
+  font-size: 24px;
+  margin: 70px 0px 0px -360px;
   border-radius: 15px;
+  position: absolute;
+}
+
+.temperature2 {
+  color: white;
+  font-size: 24px;
+  margin: 70px 0px 0px 120px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature3 {
+  color: white;
+  font-size: 24px;
+  margin: 70px 0px 0px 600px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature4 {
+  color: white;
+  font-size: 24px;
+  margin: 270px 0px 0px -360px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature5 {
+  color: white;
+  font-size: 24px;
+  margin: 270px 0px 0px 120px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature6 {
+  color: white;
+  font-size: 24px;
+  margin: 270px 0px 0px 600px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature7 {
+  color: white;
+  font-size: 24px;
+  margin: 470px 0px 0px -360px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature8 {
+  color: white;
+  font-size: 24px;
+  margin: 470px 0px 0px 120px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature9 {
+  color: white;
+  font-size: 24px;
+  margin: 470px 0px 0px 600px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature10 {
+  color: white;
+  font-size: 24px;
+  margin: 670px 0px 0px -360px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature11 {
+  color: white;
+  font-size: 24px;
+  margin: 670px 0px 0px 120px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.temperature12 {
+  color: white;
+  font-size: 24px;
+  margin: 670px 0px 0px 600px;
+  border-radius: 15px;
+  position: absolute;
 }
 
 .pcon {
   color: white;
   font-size: 24px;
   text-align: center;
+}
+
+p{
+  font-size: 3vh;
+  margin: 5px;
 }
