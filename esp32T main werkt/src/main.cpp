@@ -18,12 +18,34 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
 // Variables to store temperature values
+String temperatureF = "";
 String temperatureC = "";
+String temperatureF1 = "";
 String temperatureC1 = "";
+String temperatureC2 = "";
+String temperatureF2 = "";
+String temperatureF3 = "";
+String temperatureC3 = "";
+String temperatureF4 = "";
+String temperatureC4 = "";
+String temperatureF5 = "";
+String temperatureC5 = "";
+String temperatureF6 = "";
+String temperatureC6 = "";
+String temperatureF7 = "";
+String temperatureC7 = "";
+String temperatureF8 = "";
+String temperatureC8 = "";
+String temperatureF9 = "";
+String temperatureC9 = "";
+String temperatureF10 = "";
+String temperatureC10 = "";
+String temperatureF11 = "";
+String temperatureC11 = "";
 
 // Timer variables
 unsigned long lastTime = 0;  
-unsigned long timerDelay = 3000;
+unsigned long timerDelay = 30000;
 
 // Replace with your network credentials
 const char* ssid = "OmniEnergy";
@@ -39,31 +61,225 @@ String readDSTemperatureC() {
   // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
   sensors.requestTemperatures(); 
   float tempC = sensors.getTempCByIndex(0);
-
-  if(tempC == -127.00) {
-    Serial.println("Failed to read from DS18B20 sensor");
-    return "--";
-  } else {
     Serial.print("Temperature Celsius: ");
     Serial.println(tempC); 
-  }
   return String(tempC);
 }
 
+String readDSTemperatureF() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF = sensors.getTempFByIndex(0);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF); 
+  return String(tempF);
+}
 
 String readDSTemperatureC1() {
   // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
   sensors.requestTemperatures(); 
   float tempC1 = sensors.getTempCByIndex(1);
-
-  if(tempC1 == -127.00) {
-    Serial.println("Failed to read from DS18B20 sensor");
-    return "--";
-  } else {
     Serial.print("Temperature Celsius: ");
     Serial.println(tempC1); 
-  }
   return String(tempC1);
+}
+
+String readDSTemperatureF1() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF1 = sensors.getTempFByIndex(1);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF1); 
+  return String(tempF1);
+}
+
+String readDSTemperatureC2() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC2 = sensors.getTempCByIndex(2);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC2); 
+  return String(tempC2);
+}
+
+String readDSTemperatureF2() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF2 = sensors.getTempFByIndex(2);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF2); 
+  return String(tempF2);
+}
+
+String readDSTemperatureC3() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC3 = sensors.getTempCByIndex(3);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC3); 
+  return String(tempC3);
+}
+
+String readDSTemperatureF3() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF3 = sensors.getTempFByIndex(3);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF3); 
+  return String(tempF3);
+}
+
+String readDSTemperatureC4() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC4 = sensors.getTempCByIndex(4);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC4); 
+  return String(tempC4);
+}
+
+String readDSTemperatureF4() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF4 = sensors.getTempFByIndex(4);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF4); 
+  return String(tempF4);
+}
+
+String readDSTemperatureC5() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC5 = sensors.getTempCByIndex(5);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC5); 
+  return String(tempC5);
+}
+
+String readDSTemperatureF5() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF5 = sensors.getTempFByIndex(5);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF5); 
+  return String(tempF5);
+}
+
+String readDSTemperatureC6() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC6 = sensors.getTempCByIndex(6);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC6); 
+  return String(tempC6);
+}
+
+String readDSTemperatureF6() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF6 = sensors.getTempFByIndex(6);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF6); 
+  return String(tempF6);
+}
+
+String readDSTemperatureC7() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC7 = sensors.getTempCByIndex(7);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC7); 
+  return String(tempC7);
+}
+
+String readDSTemperatureF7() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF7 = sensors.getTempFByIndex(7);
+
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF7); 
+  return String(tempF7);
+}
+
+String readDSTemperatureC8() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC8 = sensors.getTempCByIndex(8);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC8); 
+  return String(tempC8);
+}
+
+String readDSTemperatureF8() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF8 = sensors.getTempFByIndex(8);
+
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF8); 
+
+  return String(tempF8);
+}
+
+String readDSTemperatureC9() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC9 = sensors.getTempCByIndex(9);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC9); 
+  return String(tempC9);
+}
+
+String readDSTemperatureF9() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF9 = sensors.getTempFByIndex(9);
+
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF9); 
+
+  return String(tempF9);
+}
+
+String readDSTemperatureC10() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC10 = sensors.getTempCByIndex(10);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC10); 
+  return String(tempC10);
+}
+
+String readDSTemperatureF10() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF10 = sensors.getTempFByIndex(10);
+
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF10); 
+
+  return String(tempF10);
+}
+
+String readDSTemperatureC11() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempC11 = sensors.getTempCByIndex(11);
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempC11); 
+  return String(tempC11);
+}
+
+String readDSTemperatureF11() {
+  // Call sensors.requestTemperatures() to issue a global temperature and Requests to all devices on the bus
+  sensors.requestTemperatures(); 
+  float tempF11 = sensors.getTempFByIndex(11);
+
+    Serial.print("Temperature Celsius: ");
+    Serial.println(tempF11); 
+
+  return String(tempF11);
 }
 
 // Replaces placeholder with DS18B20 values
@@ -72,8 +288,74 @@ String processor(const String& var){
   if(var == "TEMPERATUREC"){
     return temperatureC;
   }
+  if(var == "TEMPERATUREF"){
+    return temperatureF;
+  }
     if(var == "TEMPERATUREC1"){
     return temperatureC1;
+  }
+    if(var == "TEMPERATUREF1"){
+    return temperatureF1;
+  }
+    if(var == "TEMPERATUREC2"){
+    return temperatureC2;
+  }
+    if(var == "TEMPERATUREF2"){
+    return temperatureF2;
+  }
+    if(var == "TEMPERATUREC3"){
+    return temperatureC3;
+  }
+      if(var == "TEMPERATUREF3"){
+    return temperatureF3;
+  }
+    if(var == "TEMPERATUREC4"){
+    return temperatureC4;
+  }
+      if(var == "TEMPERATUREF4"){
+    return temperatureF4;
+  }
+    if(var == "TEMPERATUREC5"){
+    return temperatureC5;
+  }
+      if(var == "TEMPERATUREF5"){
+    return temperatureF5;
+  }
+    if(var == "TEMPERATUREC6"){
+    return temperatureC6;
+  }
+      if(var == "TEMPERATUREF6"){
+    return temperatureF6;
+  }
+    if(var == "TEMPERATUREC7"){
+    return temperatureC7;
+  }
+      if(var == "TEMPERATUREF7"){
+    return temperatureF7;
+  }
+    if(var == "TEMPERATUREC8"){
+    return temperatureC8;
+  }
+      if(var == "TEMPERATUREF8"){
+    return temperatureF8;
+  }
+    if(var == "TEMPERATUREC9"){
+    return temperatureC9;
+  }
+      if(var == "TEMPERATUREF9"){
+    return temperatureF9;
+  }
+    if(var == "TEMPERATUREC10"){
+    return temperatureC10;
+  }
+      if(var == "TEMPERATUREF10"){
+    return temperatureF10;
+  }
+    if(var == "TEMPERATUREC11"){
+    return temperatureC11;
+  }
+      if(var == "TEMPERATUREF11"){
+    return temperatureF11;
   }
   return String();
 }
@@ -89,8 +371,29 @@ void setup() {
   sensors.begin();
 
   temperatureC = readDSTemperatureC();
+  temperatureF = readDSTemperatureF();
   temperatureC1 = readDSTemperatureC1();
-
+  temperatureF1 = readDSTemperatureF1();
+  temperatureC2 = readDSTemperatureC2();
+  temperatureF2 = readDSTemperatureF2();
+  temperatureC3 = readDSTemperatureC3();
+  temperatureF3 = readDSTemperatureF3();
+  temperatureC4 = readDSTemperatureC4();
+  temperatureF4 = readDSTemperatureF4();
+  temperatureC5 = readDSTemperatureC5();
+  temperatureF5 = readDSTemperatureF5();
+  temperatureC6 = readDSTemperatureC6();
+  temperatureF6 = readDSTemperatureF6();
+  temperatureC7 = readDSTemperatureC7();
+  temperatureF7 = readDSTemperatureF7();
+  temperatureC8 = readDSTemperatureC8();
+  temperatureF8 = readDSTemperatureF8();
+  temperatureC9 = readDSTemperatureC9();
+  temperatureF9 = readDSTemperatureF9();
+  temperatureC10 = readDSTemperatureC10();
+  temperatureF10 = readDSTemperatureF10();
+  temperatureC11 = readDSTemperatureC11();
+  temperatureF11 = readDSTemperatureF11();
     // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   Serial.println("Connecting to WiFi");
@@ -112,6 +415,10 @@ void setup() {
     request->send_P(200, "text/plain", temperatureC.c_str());
   });
 
+  server.on("/temperaturef", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send_P(200, "text/plain", temperatureF.c_str());
+  });
+
   // Route to load css files
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/style.css", "text/css");
@@ -122,6 +429,14 @@ void setup() {
   request->send(SPIFFS, "/script.js", "text/javascript");
   });
 
+  server.on("/FlexGreenLogo.png", HTTP_GET, [](AsyncWebServerRequest *request){
+  request->send(SPIFFS, "/FlexGreenLogo.png", "image/png");
+  });
+
+  server.on("/FlexGreenFavicon.png", HTTP_GET, [](AsyncWebServerRequest *request){
+  request->send(SPIFFS, "/FlexGreenFavicon.png", "image/png");
+  });
+
   // Start server
   server.begin();
 }
@@ -130,11 +445,22 @@ void loop() {
     if ((millis() - lastTime) > timerDelay) {
     temperatureC = readDSTemperatureC();
     temperatureC1 = readDSTemperatureC1();
+    temperatureC2 = readDSTemperatureC2();
+    temperatureC3 = readDSTemperatureC3();
+    temperatureC4 = readDSTemperatureC4();
+    temperatureC5 = readDSTemperatureC5();
+    temperatureC6 = readDSTemperatureC6();
+    temperatureC7 = readDSTemperatureC7();
+    temperatureC8 = readDSTemperatureC8();
+    temperatureC9 = readDSTemperatureC9();
+    temperatureC10 = readDSTemperatureC10();
+    temperatureC11 = readDSTemperatureC11();
+
   //Check WiFi connection status
     if(WiFi.status()== WL_CONNECTED){
       HTTPClient http;
 
-      String serverPath = serverName + "?sensor1=sens1&temp1=" + temperatureC + "&sensor2=sens2&temp2=" + temperatureC1 ;
+      String serverPath = serverName + "?sensor1=sens1&temp1=" + temperatureC + "&sensor2=sens2&temp2=" + temperatureC1 + "&sensor3=sens3&temp3=" + temperatureC2 + "&sensor4=sens4&temp4=" + temperatureC3 + "&sensor5=sens5&temp5=" + temperatureC4 + "&sensor6=sens6&temp6=" + temperatureC5 + "&sensor7=sens7&temp7=" + temperatureC6 + "&sensor8=sens8&temp8=" + temperatureC7 + "&sensor9=sens9&temp9=" + temperatureC8 + "&sensor10=sens10&temp10=" + temperatureC9 + "&sensor11=sens11&temp11=" + temperatureC10 + "&sensor12=sens12&temp12=" + temperatureC11 ;
       
       // Your Domain name with URL path or IP address with path
       http.begin(serverPath.c_str());

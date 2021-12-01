@@ -103,9 +103,8 @@ function savenetwork() {
         document.getElementById("temperaturec").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/temperaturec", true);
-    xhttp.send();
   }, 10000) ;
+
   setInterval(function ( ) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -113,9 +112,8 @@ function savenetwork() {
         document.getElementById("temperaturef").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/temperaturef", true);
-    xhttp.send();
   }, 10000) ;
+
 
   setInterval(function ( ) {
     var xhttp = new XMLHttpRequest();
@@ -124,9 +122,8 @@ function savenetwork() {
         document.getElementById("temperaturec1").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/temperaturec1", true);
-    xhttp.send();
   }, 10000) ;
+
   setInterval(function ( ) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -134,6 +131,184 @@ function savenetwork() {
         document.getElementById("temperaturef1").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/temperaturef1", true);
-    xhttp.send();
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec2").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef1").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec3").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef3").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec4").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef4").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec5").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef5").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec6").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef6").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec7").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef7").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec8").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef8").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec9").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef9").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec10").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef10").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturec11").innerHTML = this.responseText;
+      }
+    };
+  }, 10000) ;
+
+  setInterval(function ( ) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("temperaturef11").innerHTML = this.responseText;
+      }
+    };
   }, 10000) ;
